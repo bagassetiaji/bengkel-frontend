@@ -14,7 +14,7 @@ const EditSparepart = ({ sparepartId }) => {
 
     const fetchSparepart = async () => {
         try {
-            const response = await axios.get(`http://localhost:5000/api/spareparts/${sparepartId}`);
+            const response = await axios.get(`https://backend-dot-kelompok-06.et.r.appspot.com/api/spareparts/${sparepartId}`);
             const sparepart = response.data[0];
             setName(sparepart.name);
             setJumlahStok(sparepart.jumlah_stok);
@@ -27,7 +27,7 @@ const EditSparepart = ({ sparepartId }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:5000/api/spareparts/${sparepartId}`, {
+            await axios.put(`https://backend-dot-kelompok-06.et.r.appspot.com/api/spareparts/${sparepartId}`, {
                 name: name,
                 jumlah_stok: jumlahStok,
                 harga: harga,

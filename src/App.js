@@ -18,7 +18,7 @@ function App() {
 
     const fetchMotors = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/motors');
+            const response = await axios.get('https://backend-dot-kelompok-06.et.r.appspot.com/api/motors');
             setMotors(response.data);
             setLoading(false);
         } catch (error) {

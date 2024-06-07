@@ -17,7 +17,7 @@ const ListSparepart = () => {
 
     const fetchSpareparts = async () => {
         try {
-            const response = await axios.get("http://localhost:5000/api/spareparts");
+            const response = await axios.get("https://backend-dot-kelompok-06.et.r.appspot.com/api/spareparts");
             setSpareparts(response.data);
         } catch (error) {
             console.error('There was an error fetching the spareparts!', error);
@@ -26,7 +26,7 @@ const ListSparepart = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/api/spareparts/${id}`);
+            await axios.delete(`https://backend-dot-kelompok-06.et.r.appspot.com/api/spareparts/${id}`);
             fetchSpareparts();
         } catch (error) {
             console.error('There was an error deleting the sparepart!', error);
@@ -51,7 +51,7 @@ const ListSparepart = () => {
 
     const handleEditSubmit = async () => {
         try {
-            await axios.put(`http://localhost:5000/api/spareparts/${editId}`, {
+            await axios.put(`https://backend-dot-kelompok-06.et.r.appspot.com/api/spareparts/${editId}`, {
                 name: editName,
                 jumlah_stok: editJumlahStok,
                 harga: editHarga,

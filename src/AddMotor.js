@@ -9,7 +9,7 @@ const AddMotor = ({ fetchMotors }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/api/motors', {
+            await axios.post('https://backend-dot-kelompok-06.et.r.appspot.com/api/motors', {
                 type_motor: typeMotor,
                 nama_motor: namaMotor,
             });

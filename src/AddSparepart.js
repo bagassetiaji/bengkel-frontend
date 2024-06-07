@@ -11,7 +11,7 @@ const AddSparepart = ({ fetchSpareparts }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/api/spareparts', {
+            await axios.post('https://backend-dot-kelompok-06.et.r.appspot.com/api/spareparts', {
                 id_motor: idMotor,
                 name: name,
                 jumlah_stok: jumlahStok,

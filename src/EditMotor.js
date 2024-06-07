@@ -11,7 +11,7 @@ const EditMotor = ({ match }) => {
     useEffect(() => {
         const fetchMotor = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/motors/${match.params.id}`);
+                const response = await axios.get(`https://backend-dot-kelompok-06.et.r.appspot.com/api/motors/${match.params.id}`);
                 const motor = response.data[0];
                 setTypeMotor(motor.type_motor);
                 setNamaMotor(motor.nama_motor);
@@ -25,7 +25,7 @@ const EditMotor = ({ match }) => {
 
     const handleEditSubmit = async () => {
         try {
-            await axios.put(`http://localhost:5000/api/motors/${match.params.id}`, {
+            await axios.put(`https://backend-dot-kelompok-06.et.r.appspot.com/api/motors/${match.params.id}`, {
                 type_motor: typeMotor,
                 nama_motor: namaMotor,
             });

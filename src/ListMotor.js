@@ -11,7 +11,7 @@ const ListMotor = ({ motors, fetchMotors }) => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/api/motors/${id}`);
+            await axios.delete(`https://backend-dot-kelompok-06.et.r.appspot.com/api/motors/${id}`);
             fetchMotors();
         } catch (error) {
             console.error('There was an error deleting the motor!', error);
@@ -34,7 +34,7 @@ const ListMotor = ({ motors, fetchMotors }) => {
 
     const handleEditSubmit = async () => {
         try {
-            await axios.put(`http://localhost:5000/api/motors/${editId}`, {
+            await axios.put(`https://backend-dot-kelompok-06.et.r.appspot.com/api/motors/${editId}`, {
                 type_motor: editTypeMotor,
                 nama_motor: editNamaMotor,
             });
